@@ -11,16 +11,37 @@
       content="Lindungi akun digital dengan kata sandi unik, autentikasi multifaktor, kewaspadaan terhadap phishing, pembaruan perangkat, dan langkah pemulihan akun."
     />
     <meta name="robots" content="index,follow" />
+    <meta name="google-site-verification" content="5CrNe8UDSYp2Fxsf2TOQ5s9ve0_XhDBWI9bNokfwHVU" />
 
     <link
       rel="canonical"
-      href="https://YOUR-DOMAIN.example/keamanan-digital.html"
+      href="https://guide.urity.org/keamanan-digital.html"
     />
     <link rel="stylesheet" href="https://cdn.urity.org/assets/css/style1.css" onerror="this.onerror=null;this.href='assets/css/style1.css'" />
     <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.urity.org/favicon/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="https://cdn.urity.org/favicon/apple-touch-icon.png" />
     <meta property="og:image" content="https://cdn.urity.org/og/urity-og.webp.webp" />
     <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Beranda",
+            "item": "https://guide.urity.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Keamanan Digital",
+            "item": "https://guide.urity.org/keamanan-digital.html"
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>
@@ -54,9 +75,11 @@
     </header>
 
     <main class="container content">
-      <div class="breadcrumb">
-        <a href="index.html">Beranda</a> / Keamanan Digital
-      </div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Beranda</a>
+        <span aria-hidden="true">›</span>
+        <span>Keamanan Digital</span>
+      </nav>
 
       <section>
         <h1>Cara Menjaga Keamanan Akun Digital</h1>
@@ -145,14 +168,23 @@
           <p>
             Sebelum membeli voucher atau melakukan top up, baca juga
             <a href="panduan-digital.html">panduan menggunakan layanan digital</a>
-            dan <a href="faq.html">jawaban atas pertanyaan umum</a>.
+            dan <a href="faq.html">jawaban atas pertanyaan umum</a>. Baca juga
+            <a href="artikel/cara-menghindari-phishing-akun-game.html">cara menghindari phishing akun game</a>.
           </p>
         </div>
       </section>
     </main>
 
     <footer>
-      <div class="container">© 2026 Urity Digital Hub</div>
+      <div class="container">
+        <nav aria-label="Tautan footer">
+          <a href="tentang.html">Tentang</a>
+          <a href="faq.html">FAQ</a>
+          <a href="panduan-digital.html">Panduan</a>
+          <a href="keamanan-digital.html">Keamanan</a>
+        </nav>
+        <span>© 2026 Urity Digital Hub</span>
+      </div>
     </footer>
   </body>
 </html>

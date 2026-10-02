@@ -11,8 +11,9 @@
       content="Kenali voucher, gift card, dan top up game. Baca panduan memilih produk digital, memeriksa detail pembelian, dan menjaga keamanan akun di Urity Digital Hub."
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="google-site-verification" content="5CrNe8UDSYp2Fxsf2TOQ5s9ve0_XhDBWI9bNokfwHVU" />
 
-    <link rel="canonical" href="https://YOUR-DOMAIN.example/" />
+    <link rel="canonical" href="https://guide.urity.org/" />
     <link rel="stylesheet" href="https://cdn.urity.org/assets/css/style1.css" onerror="this.onerror=null;this.href='assets/css/style1.css'" />
     <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.urity.org/favicon/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="https://cdn.urity.org/favicon/apple-touch-icon.png" />
@@ -25,15 +26,41 @@
       property="og:description"
       content="Kenali produk digital, periksa detail sebelum membeli, dan pelajari langkah menjaga keamanan akun."
     />
-    <meta property="og:url" content="https://YOUR-DOMAIN.example/" />
+    <meta property="og:url" content="https://guide.urity.org/" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Urity Digital Hub",
-        "url": "https://YOUR-DOMAIN.example/",
-        "description": "Panduan memahami produk digital, memeriksa detail pembelian, dan menjaga keamanan akun."
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://guide.urity.org/#website",
+            "url": "https://guide.urity.org/",
+            "name": "Urity Digital Hub",
+            "description": "Panduan memahami produk digital, memeriksa detail pembelian, dan menjaga keamanan akun.",
+            "inLanguage": "id-ID"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://guide.urity.org/#organization",
+            "name": "Urity Digital Hub",
+            "url": "https://guide.urity.org/"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Beranda",
+            "item": "https://guide.urity.org/"
+          }
+        ]
       }
     </script>
   </head>
@@ -69,6 +96,12 @@
     </header>
 
     <main>
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <span>Beranda</span>
+        </nav>
+      </div>
+
       <section class="hero">
         <div class="container">
           <span class="eyebrow">Portal Informasi Digital</span>
@@ -128,6 +161,20 @@
             </p>
             <a href="keamanan-digital.html">Pelajari keamanan →</a>
           </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="container content">
+          <h2>Artikel pilihan</h2>
+          <p>Penjelasan singkat untuk pertanyaan yang sering muncul saat memilih dan menggunakan produk digital.</p>
+          <ul>
+            <li><a href="artikel/apa-itu-voucher-digital.html">Apa itu voucher digital?</a></li>
+            <li><a href="artikel/perbedaan-voucher-dan-gift-card.html">Perbedaan voucher dan gift card</a></li>
+            <li><a href="artikel/cara-memeriksa-id-game-sebelum-top-up.html">Cara memeriksa ID game sebelum top up</a></li>
+            <li><a href="artikel/cara-menghindari-phishing-akun-game.html">Cara menghindari phishing akun game</a></li>
+            <li><a href="artikel/checklist-sebelum-membeli-produk-digital.html">Checklist sebelum membeli produk digital</a></li>
+          </ul>
         </div>
       </section>
 
@@ -222,7 +269,13 @@
 
     <footer>
       <div class="container">
-        © 2026 Urity Digital Hub · Informasi Produk Digital & Teknologi
+        <nav aria-label="Tautan footer">
+          <a href="tentang.html">Tentang</a>
+          <a href="faq.html">FAQ</a>
+          <a href="panduan-digital.html">Panduan</a>
+          <a href="keamanan-digital.html">Keamanan</a>
+        </nav>
+        <span>© 2026 Urity Digital Hub</span>
       </div>
     </footer>
   </body>

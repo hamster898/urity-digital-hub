@@ -11,8 +11,9 @@
       content="Jawaban tentang produk digital, voucher, top up game, pemeriksaan sebelum membeli, kendala transaksi, dan keamanan akun."
     />
     <meta name="robots" content="index,follow" />
+    <meta name="google-site-verification" content="5CrNe8UDSYp2Fxsf2TOQ5s9ve0_XhDBWI9bNokfwHVU" />
 
-    <link rel="canonical" href="https://YOUR-DOMAIN.example/faq.html" />
+    <link rel="canonical" href="https://guide.urity.org/faq.html" />
     <link rel="stylesheet" href="https://cdn.urity.org/assets/css/style1.css" onerror="this.onerror=null;this.href='assets/css/style1.css'" />
     <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.urity.org/favicon/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="https://cdn.urity.org/favicon/apple-touch-icon.png" />
@@ -30,6 +31,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Produk digital adalah produk atau layanan yang digunakan secara elektronik dan umumnya tidak dikirim sebagai barang fisik. Bentuknya dapat berupa kode, saldo, akses aplikasi, atau layanan berlangganan."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Apa contoh produk digital?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Contohnya voucher game, gift card, paket data, saldo permainan, layanan aplikasi, dan langganan digital. Cara penggunaan dan batas wilayahnya mengikuti ketentuan masing-masing penyedia."
             }
           },
           {
@@ -58,7 +67,7 @@
           },
           {
             "@type": "Question",
-            "name": "Mengapa ID pemain dan server perlu diperiksa saat top up?",
+            "name": "Mengapa saya harus memeriksa ID pemain dan server?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "ID atau server yang keliru dapat mengarahkan pesanan ke akun yang berbeda atau membuat pengisian gagal. Cocokkan data dengan profil dalam game sebelum mengirim pesanan."
@@ -74,11 +83,31 @@
           },
           {
             "@type": "Question",
-            "name": "Apakah kode OTP boleh diberikan kepada petugas bantuan?",
+            "name": "Apakah OTP boleh diberikan kepada petugas bantuan?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Jangan bagikan OTP atau kode verifikasi kepada siapa pun. Masukkan kode hanya pada aplikasi atau situs resmi ketika Anda sendiri sedang masuk atau mengonfirmasi tindakan."
             }
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Beranda",
+            "item": "https://guide.urity.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "FAQ",
+            "item": "https://guide.urity.org/faq.html"
           }
         ]
       }
@@ -116,7 +145,11 @@
     </header>
 
     <main class="container content">
-      <div class="breadcrumb"><a href="index.html">Beranda</a> / FAQ</div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Beranda</a>
+        <span aria-hidden="true">›</span>
+        <span>FAQ</span>
+      </nav>
 
       <section>
         <h1>Pertanyaan Umum tentang Produk dan Layanan Digital</h1>
@@ -196,7 +229,15 @@
     </main>
 
     <footer>
-      <div class="container">© 2026 Urity Digital Hub</div>
+      <div class="container">
+        <nav aria-label="Tautan footer">
+          <a href="tentang.html">Tentang</a>
+          <a href="faq.html">FAQ</a>
+          <a href="panduan-digital.html">Panduan</a>
+          <a href="keamanan-digital.html">Keamanan</a>
+        </nav>
+        <span>© 2026 Urity Digital Hub</span>
+      </div>
     </footer>
   </body>
 </html>

@@ -11,8 +11,9 @@
       content="Kenali Urity Digital Hub, portal informasi tentang produk digital, transaksi online, dan keamanan akun."
     />
     <meta name="robots" content="index,follow" />
+    <meta name="google-site-verification" content="5CrNe8UDSYp2Fxsf2TOQ5s9ve0_XhDBWI9bNokfwHVU" />
 
-    <link rel="canonical" href="https://YOUR-DOMAIN.example/tentang.html" />
+    <link rel="canonical" href="https://guide.urity.org/tentang.html" />
     <link rel="stylesheet" href="https://cdn.urity.org/assets/css/style1.css" onerror="this.onerror=null;this.href='assets/css/style1.css'" />
     <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.urity.org/favicon/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="https://cdn.urity.org/favicon/apple-touch-icon.png" />
@@ -25,20 +26,40 @@
       property="og:description"
       content="Kenali Urity Digital Hub, portal informasi tentang produk digital, transaksi online, dan keamanan akun."
     />
-    <meta property="og:url" content="https://YOUR-DOMAIN.example/tentang.html" />
+    <meta property="og:url" content="https://guide.urity.org/tentang.html" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "AboutPage",
         "name": "Tentang Urity Digital Hub",
-        "url": "https://YOUR-DOMAIN.example/tentang.html",
+        "url": "https://guide.urity.org/tentang.html",
         "description": "Informasi tentang ruang editorial Urity Digital Hub dan topik yang dibahasnya.",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Urity Digital Hub",
-          "url": "https://YOUR-DOMAIN.example/"
+          "url": "https://guide.urity.org/"
         }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Beranda",
+            "item": "https://guide.urity.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tentang Urity Digital Hub",
+            "item": "https://guide.urity.org/tentang.html"
+          }
+        ]
       }
     </script>
   </head>
@@ -74,9 +95,11 @@
     </header>
 
     <main class="container content">
-      <div class="breadcrumb">
-        <a href="index.html">Beranda</a> / Tentang Urity Digital Hub
-      </div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Beranda</a>
+        <span aria-hidden="true">›</span>
+        <span>Tentang Urity Digital Hub</span>
+      </nav>
 
       <section>
         <h1>Tentang Urity Digital Hub</h1>
@@ -95,7 +118,7 @@
           dan mengambil keputusan dengan informasi yang cukup.
         </p>
 
-        <h2>Topik yang kami bahas</h2>
+        <h2>Apa yang Kami Bahas</h2>
 
         <h3>Produk digital</h3>
         <p>
@@ -116,7 +139,7 @@
           OTP, perangkat, dan kewaspadaan terhadap pesan phishing.
         </p>
 
-        <h2>Cara menggunakan situs ini</h2>
+        <h2>Tujuan Urity Digital Hub</h2>
 
         <p>
           Mulai dari <a href="produk-digital.html">pengenalan produk digital</a>
@@ -127,13 +150,31 @@
           halaman <a href="faq.html">FAQ</a>.
         </p>
 
-        <h2>Ruang informasi yang terus diperiksa</h2>
+        <h2>Bagaimana Panduan Disusun</h2>
 
         <p>
           Informasi produk, harga, masa berlaku, wilayah penggunaan, dan aturan
           pengembalian dapat berubah menurut penyedia. Karena itu, gunakan
           artikel di situs ini sebagai panduan membaca detail, lalu periksa
           ketentuan terbaru pada layanan resmi sebelum menyelesaikan transaksi.
+        </p>
+
+        <h2>Sumber Informasi</h2>
+
+        <p>
+          Kami menggunakan informasi yang tersedia pada dokumentasi dan kanal
+          resmi penyedia, panduan keamanan publik, serta penjelasan yang dapat
+          diperiksa ulang. Jika sebuah ketentuan berbeda menurut wilayah,
+          platform, atau jenis akun, perbedaan itu kami jelaskan agar pembaca
+          tidak menganggap satu aturan berlaku untuk semua layanan.
+        </p>
+
+        <h2>Hubungi Kami</h2>
+
+        <p>
+          Untuk pertanyaan tentang topik atau koreksi informasi, kunjungi
+          dan gunakan kanal kontak resmi yang tercantum di sana. Jangan kirim
+          kata sandi, OTP, atau data pembayaran melalui pesan.
         </p>
 
         <div class="cta">
@@ -151,7 +192,15 @@
     </main>
 
     <footer>
-      <div class="container">© 2026 Urity Digital Hub</div>
+      <div class="container">
+        <nav aria-label="Tautan footer">
+          <a href="tentang.html">Tentang</a>
+          <a href="faq.html">FAQ</a>
+          <a href="panduan-digital.html">Panduan</a>
+          <a href="keamanan-digital.html">Keamanan</a>
+        </nav>
+        <span>© 2026 Urity Digital Hub</span>
+      </div>
     </footer>
   </body>
 </html>

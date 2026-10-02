@@ -60,14 +60,12 @@ header {
   gap: 10px;
 }
 
-.brand-mark {
+.brand-logo {
   width: 34px;
   height: 34px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--accent);
-  color: #fffdf8;
+  display: block;
+  object-fit: contain;
+  flex: 0 0 34px;
 }
 
 .nav-links {
@@ -212,6 +210,18 @@ footer {
   color: var(--muted);
   font-size: 14px;
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  margin-bottom: 12px;
+}
+
+footer nav a {
+  color: var(--ink);
+  font-weight: 700;
 }
 
 :focus-visible {

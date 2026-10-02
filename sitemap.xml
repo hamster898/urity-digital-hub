@@ -2,31 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://YOUR-DOMAIN.example/</loc>
+    <loc>https://guide.urity.org/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://YOUR-DOMAIN.example/produk-digital.html</loc>
+    <loc>https://guide.urity.org/produk-digital.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://YOUR-DOMAIN.example/panduan-digital.html</loc>
+    <loc>https://guide.urity.org/panduan-digital.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://YOUR-DOMAIN.example/keamanan-digital.html</loc>
+    <loc>https://guide.urity.org/keamanan-digital.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://YOUR-DOMAIN.example/faq.html</loc>
+    <loc>https://guide.urity.org/faq.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://guide.urity.org/tentang.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://guide.urity.org/artikel/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://guide.urity.org/artikel/apa-itu-voucher-digital.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://guide.urity.org/artikel/perbedaan-voucher-dan-gift-card.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://guide.urity.org/artikel/cara-memeriksa-id-game-sebelum-top-up.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://guide.urity.org/artikel/cara-menghindari-phishing-akun-game.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://guide.urity.org/artikel/checklist-sebelum-membeli-produk-digital.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
