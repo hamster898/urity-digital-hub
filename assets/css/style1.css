@@ -139,7 +139,7 @@ section {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, .9fr) minmax(0, .9fr);
   gap: 20px;
 }
 
@@ -353,4 +353,633 @@ footer { margin-top: 32px; background: #eeefe8; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+/* Premium Urity direction: dark product-hub surfaces, one gold accent, and
+   layered editorial depth inspired by the urity.org landing page. */
+:root {
+  --paper: #080d15;
+  --surface: #111a27;
+  --surface-raised: #172336;
+  --ink: #f6f7f4;
+  --muted: #93a0b2;
+  --line: rgba(169, 184, 204, .16);
+  --accent: #f4ad27;
+  --accent-soft: rgba(244, 173, 39, .12);
+  --max: 1180px;
+  --radius: 14px;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  background-image: radial-gradient(circle at 78% 12%, rgba(23, 62, 101, .24), transparent 28rem), linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: auto, 48px 48px, 48px 48px;
+}
+
+h1, h2, h3 { color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: -.045em; }
+a { color: var(--accent); }
+header { background: rgba(8, 13, 21, .9); border-bottom: 1px solid var(--line); backdrop-filter: blur(18px); }
+.nav { min-height: 72px; }
+.brand { color: var(--ink); }
+.brand-logo { border-radius: 10px; }
+.nav-links a { color: #b5c0cf; transition: color .2s ease, transform .2s ease; }
+.nav-links a:hover { color: var(--accent); transform: translateY(-1px); }
+header::after { display: none; }
+
+.hero { position: relative; overflow: hidden; padding: clamp(78px, 10vw, 132px) 0 clamp(72px, 7vw, 88px); border-bottom: 1px solid var(--line); background: linear-gradient(120deg, rgba(8,13,21,.98) 0%, rgba(11,22,37,.96) 58%, rgba(17,31,50,.86) 100%); }
+.hero .container { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .72fr); align-items: center; gap: clamp(40px, 7vw, 96px); }
+.hero .container > * { position: relative; z-index: 2; }
+.hero .container > span, .hero .container > h1, .hero .container > p { grid-column: 1; }
+.hero-visual { grid-column: 2; grid-row: 1 / span 4; position: relative; min-height: 390px; width: min(100%, 360px); justify-self: center; }
+.hero .container > p:last-child { margin-bottom: 0; }
+.hero h1 { max-width: 720px; font-size: clamp(44px, 6.8vw, 82px); line-height: .98; text-wrap: balance; }
+.hero h1::first-line { color: var(--accent); }
+.hero p { max-width: 650px; color: var(--muted); font-size: clamp(17px, 1.5vw, 19px); }
+.eyebrow { border: 1px solid rgba(244,173,39,.38); background: var(--accent-soft); color: var(--accent); border-radius: 999px; letter-spacing: .04em; }
+.btn { border-radius: 8px; transition: transform .2s ease, background-color .2s ease, border-color .2s ease; }
+.btn-primary { background: var(--accent); color: #16130c; box-shadow: 0 12px 28px rgba(244,173,39,.18); }
+.btn-primary:hover { background: #ffc14b; color: #16130c; transform: translateY(-2px); }
+.btn-secondary { border-color: var(--line); background: rgba(255,255,255,.035); color: var(--ink); }
+.btn-secondary:hover { background: rgba(255,255,255,.09); border-color: rgba(244,173,39,.4); }
+
+section { padding: clamp(56px, 6vw, 72px) 0; }
+.grid { grid-template-columns: 1.1fr 1fr 1fr; gap: 16px; }
+.card { min-height: 250px; padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(150deg, rgba(23,35,54,.98), rgba(13,21,34,.98)); box-shadow: 0 20px 48px rgba(0,0,0,.18); }
+.card:first-child { transform: translateY(-18px); border-color: rgba(244,173,39,.35); }
+.card h2 { font-size: 26px; }
+.card p, .content p, .content li { color: var(--muted); }
+.card a { color: var(--accent); }
+.content { max-width: 780px; }
+.content h2 { margin-top: 2.5em; font-size: clamp(28px, 3.4vw, 40px); }
+.breadcrumb { color: #728095; }
+.cta { border: 1px solid rgba(244,173,39,.3); border-radius: var(--radius); background: linear-gradient(135deg, rgba(244,173,39,.12), rgba(23,35,54,.8)); }
+.location-section { border-top: 1px solid var(--line); background: rgba(17,26,39,.42); }
+.location-section .eyebrow { margin-bottom: 12px; }
+.location-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 0; list-style: none; }
+.location-links li { margin: 0; padding: 18px 20px; border: 1px solid var(--line); border-radius: 10px; background: rgba(23,35,54,.78); }
+.location-links a { display: block; color: var(--accent); font-weight: 700; text-decoration: none; }
+.location-links li:hover { border-color: rgba(244,173,39,.45); }
+footer { margin-top: 32px; padding: 0; border-top: 1px solid var(--line); background: #060a11; color: #8090a5; }
+
+footer .container {
+  display: grid;
+  grid-template-columns: minmax(180px, .8fr) minmax(260px, 1.4fr) auto;
+  align-items: center;
+  gap: 28px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer .container::before {
+  color: var(--ink);
+  content: "URITY DIGITAL HUB";
+  font: 800 12px/1.2 system-ui, sans-serif;
+  letter-spacing: .16em;
+}
+
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  align-items: center;
+}
+
+footer nav a {
+  color: #aeb9c7;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+footer nav a:hover,
+footer nav a:focus-visible {
+  color: var(--accent);
+}
+
+footer span {
+  justify-self: end;
+  color: #6f7d8e;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  footer .container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  footer span {
+    justify-self: start;
+  }
+}
+
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+
+@media (max-width: 850px) {
+  .hero .container { grid-template-columns: 1fr; }
+  .hero { padding: 64px 0; }
+  .hero-visual { grid-column: 1; grid-row: auto; min-height: 320px; margin: 24px auto 0; transform: scale(.88); transform-origin: top center; }
+  .hero h1 { max-width: 650px; }
+  .card:first-child { transform: none; }
+  .location-links { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 420px) {
+  header::after { display: none; }
+  .hero { padding: 52px 0 56px; }
+  .hero-visual { margin-left: -8px; transform: scale(.78); }
+}
+
+/* Section audit refinements: less template-like repetition, clearer hierarchy,
+   and a single editorial treatment for supporting content. */
+header::after { display: none; }
+
+.grid {
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, .9fr) minmax(0, .9fr);
+  gap: 20px;
+}
+
+.grid .card {
+  min-height: 230px;
+}
+
+.grid .card:first-child {
+  min-height: 286px;
+  padding: 34px;
+}
+
+.grid .card:nth-child(2),
+.grid .card:nth-child(3) {
+  background: rgba(23, 35, 54, .72);
+}
+
+.content > h1 + p {
+  max-width: 65ch;
+  color: #aab5c3;
+  font-size: 1.08rem;
+}
+
+.content > h2 {
+  margin-top: 58px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.content > h2:first-of-type {
+  margin-top: 32px;
+}
+
+.content > ul,
+.content > ol {
+  padding-left: 1.25rem;
+}
+
+.content > li,
+.content > ul li,
+.content > ol li {
+  margin: .65rem 0;
+}
+
+.cta {
+  border-left: 3px solid var(--accent);
+  background: var(--surface-raised);
+  box-shadow: none;
+}
+
+.location-links li {
+  border-radius: var(--radius);
+}
+
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid .card:first-child {
+    min-height: 230px;
+    padding: 30px;
+  }
+}
+
+/* Keep the hero rhythm explicit so the visual column cannot inflate text rows. */
+.hero .container {
+  grid-template-areas:
+    "eyebrow visual"
+    "title visual"
+    "body visual"
+    "actions visual";
+  grid-template-rows: auto auto auto auto;
+  align-items: start;
+}
+
+.hero .container > span { grid-area: eyebrow; }
+.hero .container > h1 { grid-area: title; margin-top: 16px; }
+.hero .container > p:first-of-type { grid-area: body; margin-top: 0; }
+.hero .container > p:last-of-type { grid-area: actions; }
+
+.hero-visual {
+  grid-area: visual;
+  grid-row: auto;
+  align-self: center;
+  min-height: 350px;
+}
+
+@media (max-width: 850px) {
+  .hero .container {
+    grid-template-areas:
+      "eyebrow"
+      "title"
+      "body"
+      "actions"
+      "visual";
+    grid-template-rows: auto;
+  }
+
+  .hero-visual {
+    min-height: 320px;
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 851px) {
+  .hero-visual {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    align-self: auto;
+    margin-top: 0;
+    transform: none;
+  }
+}
+
+/* Final hero structure: one content column and one visual column. */
+.hero .container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, .72fr);
+  grid-template-areas: "copy visual";
+  align-items: center;
+  gap: clamp(40px, 7vw, 96px);
+  padding-right: 0;
+}
+
+.hero-copy {
+  grid-area: copy;
+  min-width: 0;
+}
+
+.hero-copy .eyebrow {
+  margin-bottom: 16px;
+}
+
+.hero-copy h1 {
+  margin-top: 0;
+}
+
+.hero-copy p:first-of-type {
+  margin-top: 0;
+}
+
+.hero-copy p:last-of-type {
+  margin-bottom: 0;
+}
+
+.hero-visual {
+  grid-area: visual;
+  position: relative;
+  top: auto;
+  right: auto;
+  align-self: start;
+  width: min(100%, 360px);
+  margin-top: 34px;
+  transform: none;
+}
+
+@media (max-width: 850px) {
+  .hero .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "visual";
+    gap: 0;
+  }
+
+  .hero-visual {
+    width: min(100%, 360px);
+    margin: 24px auto 0;
+    transform: scale(.88);
+  }
+}
+
+/* Definitive column placement after the legacy overrides above. */
+@media (min-width: 851px) {
+  .hero .container {
+    display: grid !important;
+    position: relative;
+    grid-template-columns: minmax(0, 1.4fr) minmax(240px, .6fr);
+    grid-template-areas: "copy visual";
+    align-items: start;
+    gap: clamp(28px, 4vw, 56px);
+    padding-right: 0;
+  }
+
+  .hero-copy {
+    grid-area: copy !important;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+
+  .hero-visual {
+    grid-area: visual !important;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    align-self: start;
+    justify-self: end;
+    width: min(100%, 360px);
+    margin: 34px 0 0;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero .container {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "visual";
+    gap: 0;
+    padding-right: 0;
+  }
+
+  .hero-copy {
+    grid-area: copy !important;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+
+  .hero-visual {
+    grid-area: visual !important;
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    justify-self: center;
+    width: min(100%, 360px);
+    margin: 24px auto 0;
+    transform: scale(.88) !important;
+  }
+}
+
+/* Real-image hero direction: layered game artwork with one gold accent. */
+.hero .container {
+  grid-template-columns: minmax(0, 1fr) minmax(360px, .9fr);
+  grid-template-areas: "copy visual";
+  align-items: center;
+  gap: clamp(36px, 6vw, 84px);
+}
+
+.hero-copy {
+  grid-area: copy !important;
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+}
+
+.hero-copy h1 {
+  max-width: 690px;
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: .98;
+}
+
+.hero-copy p:first-of-type {
+  max-width: 48ch;
+  font-size: clamp(16px, 1.35vw, 18px);
+}
+
+.hero-visual {
+  grid-area: visual !important;
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  width: min(100%, 460px);
+  min-height: 470px;
+  margin: 0 !important;
+  justify-self: end;
+  transform: none !important;
+}
+
+.hero-media {
+  position: relative;
+  width: min(100%, 460px);
+  min-height: 470px;
+  isolation: isolate;
+}
+
+.hero-media::before {
+  position: absolute;
+  top: 9%;
+  right: 2%;
+  width: 74%;
+  height: 74%;
+  border: 1px solid rgba(244, 173, 39, .28);
+  border-radius: 24px;
+  content: "";
+  transform: rotate(8deg);
+  z-index: -1;
+}
+
+.hero-media img {
+  position: absolute;
+  display: block;
+  object-fit: cover;
+  border: 1px solid rgba(244, 173, 39, .46);
+  background: #172336;
+  box-shadow: 0 26px 70px rgba(0, 0, 0, .32);
+  filter: saturate(.92) contrast(1.05);
+  transition: transform .45s ease, filter .45s ease;
+}
+
+.hero-media-main {
+  top: 30px;
+  right: 18%;
+  width: 58%;
+  height: 390px;
+  border-radius: 20px;
+  transform: rotate(3deg);
+  z-index: 3;
+}
+
+.hero-media-side {
+  width: 34%;
+  height: 235px;
+  border-radius: 16px;
+  z-index: 2;
+}
+
+.hero-media-side-top {
+  top: 0;
+  left: 2%;
+  transform: rotate(-8deg);
+}
+
+.hero-media-side-bottom {
+  right: 0;
+  bottom: 22px;
+  transform: rotate(7deg);
+}
+
+.hero-media-mini {
+  bottom: 0;
+  left: 18%;
+  width: 27%;
+  height: 170px;
+  border-radius: 14px;
+  transform: rotate(-5deg);
+  z-index: 4;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-media:hover img { filter: saturate(1.04) contrast(1.08); }
+  .hero-media:hover .hero-media-main { transform: rotate(1deg) translateY(-6px); }
+  .hero-media:hover .hero-media-side-top { transform: rotate(-10deg) translate(-4px, -4px); }
+  .hero-media:hover .hero-media-side-bottom { transform: rotate(9deg) translate(4px, 4px); }
+}
+
+@media (max-width: 850px) {
+  .hero .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "copy" "visual";
+    gap: 0;
+  }
+
+  .hero-copy,
+  .hero-visual {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+  }
+
+  .hero-visual {
+    width: min(100%, 420px);
+    min-height: 410px;
+    margin: 34px auto 0 !important;
+  }
+
+  .hero-media { min-height: 410px; }
+  .hero-media-main { height: 340px; }
+  .hero-media-side { height: 205px; }
+  .hero-media-mini { height: 150px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-media img { transition: none; }
+  .hero-media-main,
+  .hero-media-side-top,
+  .hero-media-side-bottom,
+  .hero-media-mini { transform: none; }
+}
+
+/* Section audit refinements: each block gets a distinct reading mode. */
+.feature-section {
+  padding-top: clamp(48px, 6vw, 72px);
+}
+
+.feature-section .grid {
+  align-items: stretch;
+}
+
+.article-section {
+  border-top: 1px solid var(--line);
+}
+
+.article-section .content > p {
+  max-width: 58ch;
+}
+
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 24px;
+  margin: 28px 0 0;
+  padding: 0 !important;
+  list-style: none;
+}
+
+.article-list li {
+  margin: 0 !important;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+.article-list a {
+  display: block;
+  color: var(--ink);
+  font-size: 1.02rem;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.article-list a::after {
+  display: inline-block;
+  margin-left: 8px;
+  color: var(--accent);
+  content: "↗";
+  transition: transform .2s ease;
+}
+
+.article-list a:hover::after {
+  transform: translate(2px, -2px);
+}
+
+.guide-section {
+  background: rgba(17, 26, 39, .28);
+}
+
+.guide-section .content > h2 {
+  max-width: 19ch;
+}
+
+.checklist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+  margin-top: 28px;
+  padding: 0 !important;
+  list-style: none;
+  counter-reset: checklist;
+}
+
+.checklist li {
+  position: relative;
+  margin: 0 !important;
+  padding: 20px 20px 20px 52px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(23, 35, 54, .56);
+}
+
+.checklist li::before {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: var(--accent);
+  content: counter(checklist, decimal-leading-zero);
+  counter-increment: checklist;
+  font: 800 12px/1 system-ui, sans-serif;
+  letter-spacing: .08em;
+}
+
+@media (max-width: 700px) {
+  .article-list,
+  .checklist {
+    grid-template-columns: 1fr;
+  }
 }

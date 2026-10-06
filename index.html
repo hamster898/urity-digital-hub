@@ -44,7 +44,49 @@
             "@type": "Organization",
             "@id": "https://guide.urity.org/#organization",
             "name": "Urity Digital Hub",
-            "url": "https://guide.urity.org/"
+            "url": "https://guide.urity.org/",
+            "subOrganization": [
+              { "@id": "https://guide.urity.org/#naga5000-yogyakarta" },
+              { "@id": "https://guide.urity.org/#naga5000-najran" }
+            ]
+          },
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://guide.urity.org/#naga5000-yogyakarta",
+            "name": "NAGA5000 Yogyakarta",
+            "url": "https://guide.urity.org/",
+            "branchOf": { "@id": "https://guide.urity.org/#organization" },
+            "hasMap": "https://www.google.com/maps/place/naga5000/@-7.7623385,110.3737209,14z/data=!3m1!4b1!4m6!3m5!1s0xa863f03895df0729:0xe2839d8919c5a8d9!8m2!3d-7.7623815!4d110.3943634!16s%2Fg%2F11xkd85fn1?entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": -7.7623815,
+              "longitude": 110.3943634
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Yogyakarta",
+              "addressCountry": "ID"
+            }
+          },
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://guide.urity.org/#naga5000-najran",
+            "name": "NAGA5000 Najran",
+            "url": "https://guide.urity.org/",
+            "branchOf": { "@id": "https://guide.urity.org/#organization" },
+            "hasMap": "https://www.google.com/maps/place/NAGA5000%D8%8C+5000+%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D8%A9+250%D8%8C+6053%D8%8C+%D8%AC%D8%A7%D9%85%D8%B9%D8%A9+%D9%86%D8%AC%D8%B1%D8%A7%D9%86%D8%8C+%D9%86%D8%AC%D8%B1%D8%A7%D9%86+66433,+Arab+Saudi%E2%80%AD/@17.6355625,44.5045392,17z/data=!3m1!4b1!4m6!3m5!1s0x15ff2e8cb1b6acd1:0x7c26eac7fbf295c6!8m2!3d17.6355574!4d44.5071195!16s%2Fg%2F11ks0hk2hf?entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 17.6355574,
+              "longitude": 44.5071195
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "5000 الجامعة 250",
+              "postalCode": "66433",
+              "addressLocality": "Najran",
+              "addressCountry": "SA"
+            }
           }
         ]
       }
@@ -104,36 +146,72 @@
 
       <section class="hero">
         <div class="container">
-          <span class="eyebrow">Portal Informasi Digital</span>
+          <div class="hero-copy">
+            <span class="eyebrow">Portal Informasi Digital</span>
 
-          <h1>Kenali produk digital sebelum memilih dan membeli.</h1>
+            <h1>Pilih produk digital dengan lebih yakin.</h1>
 
-          <p>
-            Voucher yang terlihat cocok belum tentu bisa digunakan pada akun
-            Anda. Nama produk, wilayah penggunaan, dan cara penukaran perlu
-            diperiksa sebelum membayar. Urity Digital Hub membantu Anda memahami
-            voucher, gift card, top up game, dan layanan online melalui panduan
-            berbahasa sederhana.
-          </p>
+            <p>
+              Periksa jenis produk, wilayah akun, nominal, dan cara penukaran
+              sebelum membayar.
+            </p>
 
-          <p>
-            <a
-              class="btn btn-primary"
-              href="https://urity.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Lihat sumber informasi di Urity
-            </a>
+            <p>
+              <a
+                class="btn btn-primary"
+                href="https://urity.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Lihat sumber informasi di Urity
+              </a>
 
-            <a class="btn btn-secondary" href="panduan-digital.html">
-              Baca Panduan
-            </a>
-          </p>
+              <a class="btn btn-secondary" href="panduan-digital.html">
+                Baca Panduan
+              </a>
+            </p>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-media">
+              <img
+                class="hero-media-main"
+                src="https://cdn.urity.org/games/mobile-legends.webp"
+                alt=""
+                width="640"
+                height="900"
+                fetchpriority="high"
+              />
+              <img
+                class="hero-media-side hero-media-side-top"
+                src="https://cdn.urity.org/games/valorant.webp"
+                alt=""
+                width="640"
+                height="900"
+                loading="lazy"
+              />
+              <img
+                class="hero-media-side hero-media-side-bottom"
+                src="https://cdn.urity.org/games/roblox.webp"
+                alt=""
+                width="640"
+                height="900"
+                loading="lazy"
+              />
+              <img
+                class="hero-media-mini"
+                src="https://cdn.urity.org/games/steam-wallet.webp"
+                alt=""
+                width="640"
+                height="900"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      <section>
+      <section class="feature-section">
         <div class="container grid">
           <article class="card">
             <h2>Produk Digital</h2>
@@ -164,11 +242,11 @@
         </div>
       </section>
 
-      <section>
+      <section class="article-section">
         <div class="container content">
           <h2>Artikel pilihan</h2>
           <p>Penjelasan singkat untuk pertanyaan yang sering muncul saat memilih dan menggunakan produk digital.</p>
-          <ul>
+          <ul class="article-list">
             <li><a href="artikel/apa-itu-voucher-digital.html">Apa itu voucher digital?</a></li>
             <li><a href="artikel/perbedaan-voucher-dan-gift-card.html">Perbedaan voucher dan gift card</a></li>
             <li><a href="artikel/cara-memeriksa-id-game-sebelum-top-up.html">Cara memeriksa ID game sebelum top up</a></li>
@@ -178,7 +256,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="guide-section">
         <div class="container content">
           <h2>Mulai dari kebutuhan, lalu pilih produknya</h2>
 
@@ -206,7 +284,7 @@
 
           <h2>Empat hal yang perlu diperiksa sebelum membayar</h2>
 
-          <ol>
+          <ol class="checklist">
             <li>
               <strong>Kesesuaian produk.</strong> Cocokkan nama game atau aplikasi,
               platform, wilayah akun, dan nominal dengan deskripsi produk.
@@ -263,6 +341,22 @@
               gunakan.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section class="location-section">
+        <div class="container content">
+          <span class="eyebrow">Lokasi resmi</span>
+          <h2>Temukan cabang NAGA5000</h2>
+          <p>
+            NAGA5000 memiliki lokasi resmi di Yogyakarta dan Najran. Buka detail
+            lokasi di Google Maps untuk melihat posisi dan informasi terbaru
+            sebelum berkunjung.
+          </p>
+          <ul class="location-links">
+            <li><a href="https://www.google.com/maps/place/naga5000/@-7.7623385,110.3737209,14z/data=!3m1!4b1!4m6!3m5!1s0xa863f03895df0729:0xe2839d8919c5a8d9!8m2!3d-7.7623815!4d110.3943634!16s%2Fg%2F11xkd85fn1?entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">NAGA5000 Yogyakarta →</a></li>
+            <li><a href="https://www.google.com/maps/place/NAGA5000%D8%8C+5000+%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D8%A9+250%D8%8C+6053%D8%8C+%D8%AC%D8%A7%D9%85%D8%B9%D8%A9+%D9%86%D8%AC%D8%B1%D8%A7%D9%86%D8%8C+%D9%86%D8%AC%D8%B1%D8%A7%D9%86+66433,+Arab+Saudi%E2%80%AD/@17.6355625,44.5045392,17z/data=!3m1!4b1!4m6!3m5!1s0x15ff2e8cb1b6acd1:0x7c26eac7fbf295c6!8m2!3d17.6355574!4d44.5071195!16s%2Fg%2F11ks0hk2hf?entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">NAGA5000 Najran →</a></li>
+          </ul>
         </div>
       </section>
     </main>
