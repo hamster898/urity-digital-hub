@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /data/
+Disallow: /GOPAY/
+Disallow: /MASTER-SKILLS/
+Disallow: /.agents/
 
 Sitemap: https://guide.urity.org/sitemap.xml

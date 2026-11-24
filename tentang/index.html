@@ -21,7 +21,8 @@
     <meta name="google-site-verification" content="5CrNe8UDSYp2Fxsf2TOQ5s9ve0_XhDBWI9bNokfwHVU" />
 
     <link rel="canonical" href="https://guide.urity.org/tentang/" />
-    <link rel="stylesheet" href="../assets/css/style1.css" />
+    <link rel="stylesheet" href="https://cdn.urity.org/assets/css/style1.css" />
+    <link rel="preconnect" href="https://cdn.urity.org" crossorigin />
     <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.urity.org/favicon/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="https://cdn.urity.org/favicon/apple-touch-icon.png" />
     <meta property="og:image" content="https://cdn.urity.org/og/urity-og.webp" />
@@ -72,77 +73,93 @@
   </head>
 
   <body>
-    <header>
-      <div class="container nav">
-        <a class="brand" href="/">
-          <img class="brand-logo" src="https://cdn.urity.org/favicon/apple-touch-icon.png" alt="Urity Digital Hub" width="40" height="40" />
-          Urity Digital Hub
+    <header class="site-header">
+      <a class="skip-link visually-hidden" href="#main-content">Lewati ke konten utama</a>
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="NAGA5000 Digital Hub, kembali ke beranda">
+          <img class="brand-logo" src="https://cdn.urity.org/logo/naga5000-logo.svg" alt="NAGA5000" width="124" height="32" />
+          <span class="brand-badge">HUB</span>
         </a>
 
-        <nav class="nav-links" aria-label="Navigasi utama">
-          <details class="nav-group">
-            <summary>Produk</summary>
-            <div class="nav-dropdown">
-              <a href="https://urity.org/">Produk</a>
-              <a href="https://urity.org/#games">Katalog Game</a>
-              <a href="https://urity.org/">Katalog Voucher</a>
-            </div>
-          </details>
-          <details class="nav-group">
-            <summary aria-current="page">Panduan</summary>
-            <div class="nav-dropdown">
-              <a href="/">Panduan Utama</a>
-              <a href="/panduan-digital/">Panduan Top Up Game</a>
-              <a href="/produk-digital/">Produk &amp; Voucher Digital</a>
-              <a href="/keamanan-digital/">Keamanan Akun</a>
-              <a href="/faq/">FAQ &amp; Pusat Bantuan</a>
-            </div>
-          </details>
-          <details class="nav-group">
-            <summary>Blog</summary>
-            <div class="nav-dropdown">
-              <a href="https://blog.urity.org/">Blog</a>
-              <a href="https://blog.urity.org/gaming/">Gaming</a>
-              <a href="https://blog.urity.org/voucher-digital/">Voucher Digital</a>
-              <a href="https://blog.urity.org/tips-keamanan-akun/">Tips Keamanan Akun</a>
-            </div>
-          </details>
-          <a href="https://blog.urity.org/tentang-kami/">Tentang</a>
-          <a href="https://blog.urity.org/hubungi-kami/">Kontak</a>
+        <nav class="site-nav" aria-label="Utama">
+          <button
+            class="menu-button"
+            type="button"
+            popovertarget="site-menu"
+            popovertargetaction="toggle"
+            aria-controls="site-menu"
+          >
+            <span>Menu</span>
+          </button>
+
+          <ul id="site-menu" class="site-menu" popover="auto">
+            <li><a href="/">Beranda</a></li>
+            <li class="nav-dropdown">
+              <button
+                class="dropdown-trigger"
+                type="button"
+                aria-expanded="false"
+                aria-controls="menu-produk"
+                popovertarget="menu-produk"
+              >
+                Produk
+              </button>
+              <ul id="menu-produk" class="dropdown-list">
+                <li><a href="https://urity.org/">Semua Produk (Urity)</a></li>
+                <li><a href="https://urity.org/#games">Katalog Game</a></li>
+                <li><a href="https://urity.org/#cara-mulai">Cara Top Up</a></li>
+                <li><a href="/produk-digital/">Produk &amp; Voucher Digital</a></li>
+              </ul>
+            </li>
+            <li class="nav-dropdown">
+              <button
+                class="dropdown-trigger"
+                type="button"
+                aria-expanded="false"
+                aria-controls="menu-panduan"
+                popovertarget="menu-panduan"
+              >
+                Panduan
+              </button>
+              <ul id="menu-panduan" class="dropdown-list">
+                <li><a href="/panduan-digital/">Panduan Top Up Game</a></li>
+                <li><a href="/keamanan-digital/">Keamanan Akun</a></li>
+                <li><a href="/artikel/">Artikel &amp; Tips</a></li>
+                <li><a href="/faq/">FAQ &amp; Pusat Bantuan</a></li>
+              </ul>
+            </li>
+            <li class="nav-dropdown">
+              <button
+                class="dropdown-trigger"
+                type="button"
+                aria-expanded="false"
+                aria-controls="menu-blog"
+                popovertarget="menu-blog"
+              >
+                Blog
+              </button>
+              <ul id="menu-blog" class="dropdown-list">
+                <li><a href="https://blog.urity.org/">Beranda Blog</a></li>
+                <li><a href="https://blog.urity.org/gaming/">Gaming</a></li>
+                <li><a href="https://blog.urity.org/voucher-digital/">Voucher Digital</a></li>
+                <li><a href="https://blog.urity.org/tips-keamanan-akun/">Tips Keamanan Akun</a></li>
+              </ul>
+            </li>
+            <li><a href="https://blog.urity.org/tentang-kami/">Tentang</a></li>
+            <li><a href="https://blog.urity.org/hubungi-kami/">Kontak</a></li>
+            <li class="nav-cta-item">
+              <a class="nav-cta" href="https://naga5000.biz/" target="_blank" rel="noopener">Top Up Sekarang</a>
+            </li>
+          </ul>
         </nav>
 
-        <details class="mobile-menu">
-          <summary aria-label="Buka menu navigasi">Menu</summary>
-          <nav class="mobile-nav" aria-label="Navigasi utama">
-            <details class="mobile-nav-group">
-              <summary>Produk</summary>
-              <a href="https://urity.org/">Produk</a>
-              <a href="https://urity.org/#games">Katalog Game</a>
-              <a href="https://urity.org/">Katalog Voucher</a>
-            </details>
-            <details class="mobile-nav-group">
-              <summary aria-current="page">Panduan</summary>
-              <a href="/">Panduan Utama</a>
-              <a href="/panduan-digital/">Panduan Top Up Game</a>
-              <a href="/produk-digital/">Produk &amp; Voucher Digital</a>
-              <a href="/keamanan-digital/">Keamanan Akun</a>
-              <a href="/faq/">FAQ &amp; Pusat Bantuan</a>
-            </details>
-            <details class="mobile-nav-group">
-              <summary>Blog</summary>
-              <a href="https://blog.urity.org/">Blog</a>
-              <a href="https://blog.urity.org/gaming/">Gaming</a>
-              <a href="https://blog.urity.org/voucher-digital/">Voucher Digital</a>
-              <a href="https://blog.urity.org/tips-keamanan-akun/">Tips Keamanan Akun</a>
-            </details>
-            <a href="https://blog.urity.org/tentang-kami/">Tentang</a>
-            <a href="https://blog.urity.org/hubungi-kami/">Kontak</a>
-          </nav>
-        </details>
+        <div class="header-actions">
+          <a class="nav-cta" href="https://naga5000.biz/" target="_blank" rel="noopener">Top Up Sekarang</a>
+        </div>
       </div>
     </header>
 
-    <main class="container content">
+    <main id="main-content" tabindex="-1" class="container content">
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="/">Beranda</a>
         <span aria-hidden="true">›</span>
@@ -220,9 +237,12 @@
         <h2>Hubungi Kami</h2>
 
         <p>
-          Untuk pertanyaan tentang topik atau koreksi informasi, kunjungi
-          dan gunakan kanal kontak resmi yang tercantum di sana. Jangan kirim
-          kata sandi, OTP, atau data pembayaran melalui pesan.
+          Untuk pertanyaan tentang topik, dukungan, atau koreksi informasi,
+          hubungi <a href="mailto:support@urity.org">support@urity.org</a>, dan
+          untuk pertanyaan terkait privasi data hubungi
+          <a href="mailto:privacy@urity.org">privacy@urity.org</a> atau kunjungi
+          <a href="https://blog.urity.org/hubungi-kami/">halaman kontak resmi</a>.
+          Jangan kirim kata sandi, OTP, atau data pembayaran melalui pesan.
         </p>
 
         <div class="cta">
@@ -239,25 +259,86 @@
       </section>
     </main>
 
-    <footer>
-      <div class="container">
-      <nav aria-label="Tautan footer">
-        <a href="https://urity.org/">Produk</a>
-        <a href="/" aria-current="page">Panduan</a>
-        <a href="https://blog.urity.org/">Blog</a>
-        <a href="https://blog.urity.org/tentang-kami/">Tentang</a>
-        <a href="https://blog.urity.org/hubungi-kami/">Kontak</a>
-      </nav>
-      <nav class="site-network" aria-label="Informasi Urity">
-        <a href="https://urity.org/">Katalog Game &amp; Voucher</a>
-        <a href="/produk-digital/">Produk Digital</a>
-        <a href="/panduan-digital/">Panduan Penggunaan</a>
-        <a href="/keamanan-digital/">Keamanan Akun</a>
-        <a href="/faq/">FAQ Urity</a>
-      </nav>
-      <p class="footer-disclaimer">Urity/NAGA5000 menyediakan informasi produk dan panduan digital. Pastikan jenis produk, wilayah akun, nominal, dan metode penukaran sebelum melakukan pembelian.</p>
-        <span>© 2026 Urity Digital Hub</span>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="/" aria-label="NAGA5000 Digital Hub, kembali ke beranda">
+              <img class="brand-logo" src="https://cdn.urity.org/logo/naga5000-logo.svg" alt="NAGA5000" width="124" height="32" />
+              <span class="brand-badge">HUB</span>
+            </a>
+            <p class="footer-desc">
+              Informasi top up game, voucher, dan panduan produk digital terpercaya untuk gamer Indonesia.
+            </p>
+            <a class="footer-contact" href="https://blog.urity.org/hubungi-kami/">Pusat Bantuan &amp; Kontak</a>
+            <div class="footer-emails">
+              <a href="mailto:support@urity.org">support@urity.org</a>
+              <a href="mailto:privacy@urity.org">privacy@urity.org</a>
+            </div>
+          </div>
+
+          <nav aria-label="Platform Game">
+            <p class="footer-col-title">Platform Game</p>
+            <ul class="footer-list">
+              <li><a href="https://urity.org/#games">Mobile Legends Diamonds</a></li>
+              <li><a href="https://urity.org/#games">Free Fire Diamonds</a></li>
+              <li><a href="https://urity.org/#games">PUBG Mobile UC</a></li>
+              <li><a href="https://urity.org/#games">Genshin Impact Crystals</a></li>
+              <li><a href="https://urity.org/#games">Steam Wallet IDR</a></li>
+              <li><a href="https://urity.org/#games">Valorant Points (VP)</a></li>
+              <li><a href="https://urity.org/#games">Roblox Robux</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Urity Digital Hub">
+            <p class="footer-col-title">Urity Digital Hub</p>
+            <ul class="footer-list">
+              <li><a href="/produk-digital/">Produk Digital</a></li>
+              <li><a href="/panduan-digital/">Panduan Transaksi</a></li>
+              <li><a href="/keamanan-digital/">Keamanan Digital &amp; Akun</a></li>
+              <li><a href="/faq/">FAQ &amp; Pusat Bantuan</a></li>
+              <li><a href="/artikel/">Artikel &amp; Tips</a></li>
+              <li><a href="/tentang/" aria-current="page">Tentang Urity</a></li>
+              <li><a href="https://n5pedia.com/" target="_blank" rel="noopener">Sumber NAGA5000 (N5pedia)</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Informasi Legal">
+            <p class="footer-col-title">Informasi Legal</p>
+            <ul class="footer-list">
+              <li><a href="https://blog.urity.org/tentang-kami/">Tentang Kami</a></li>
+              <li><a href="https://blog.urity.org/redaksi/">Susunan Redaksi</a></li>
+              <li><a href="https://blog.urity.org/pedoman-media-siber/">Pedoman Media Siber</a></li>
+              <li><a href="https://blog.urity.org/hak-jawab/">Hak Jawab &amp; Koreksi</a></li>
+              <li><a href="https://blog.urity.org/kebijakan-privasi/">Kebijakan Privasi</a></li>
+              <li><a href="https://blog.urity.org/syarat-ketentuan/">Syarat &amp; Ketentuan</a></li>
+              <li><a href="https://blog.urity.org/disclaimer/">Disclaimer (Penafian)</a></li>
+              <li><a href="https://blog.urity.org/hubungi-kami/">Kontak &amp; Layanan</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <p class="footer-disclaimer">
+          Urity/NAGA5000 menyediakan informasi produk dan panduan digital. Pastikan jenis produk, wilayah akun, nominal, dan metode penukaran sebelum melakukan pembelian.
+        </p>
+
+        <div class="footer-bottom">
+          <p class="footer-copy">
+            &copy; 2026 <a href="/">Urity Digital Hub</a> &bull; NAGA5000. Hak cipta dilindungi undang-undang.
+          </p>
+          <ul class="footer-payments" aria-label="Metode pembayaran yang didukung">
+            <li>BCA</li>
+            <li>Mandiri</li>
+            <li>BRI</li>
+            <li>BNI</li>
+            <li>DANA</li>
+            <li>OVO</li>
+            <li>GoPay</li>
+            <li>QRIS</li>
+          </ul>
+        </div>
       </div>
     </footer>
+      <script src="https://cdn.urity.org/assets/js/nav.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,7 @@
+# Keep local-only reference data and skill packages out of git/deploy
+GOPAY/
+data/
+MASTER-SKILLS/
+.agents/
+.DS_Store
+Thumbs.db

@@ -1,21 +1,16 @@
-# Security Policy
+# Kebijakan Keamanan — Urity Digital Hub
 
-## Supported Versions
+## Ruang Lingkup
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Repositori ini berisi situs statis dokumentasi dan panduan publik untuk **Urity Digital Hub** (`https://guide.urity.org/`).
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+## Melaporkan Kerentanan
 
-## Reporting a Vulnerability
+Jika Anda menemukan masalah keamanan, kerentanan pada situs statis, atau tautan berbahaya yang terkait dengan `guide.urity.org`, silakan laporkan ke [support@urity.org](mailto:support@urity.org), terkait privasi ke [privacy@urity.org](mailto:privacy@urity.org), atau melalui halaman kontak resmi di [https://blog.urity.org/hubungi-kami/](https://blog.urity.org/hubungi-kami/).
 
-Use this section to tell people how to report a vulnerability.
+Harap sertakan:
+- URL halaman atau file yang terdampak
+- Deskripsi singkat masalah dan langkah reproduksi
+- Dampak yang terlihat (jika ada)
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Mohon hindari pengujian beban berlebih (*stress test*) atau pemindaian otomatis yang mengganggu ketersediaan layanan.
